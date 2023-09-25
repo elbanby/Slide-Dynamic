@@ -1,0 +1,40 @@
+.all{
+  position: absolute;
+  right: 60%;
+  bottom: 50%;
+  transform: translate(50%,50%);
+  background-color: #eee;
+  box-shadow: 1 2 3 #ede;
+  width: 810px;
+  .delete{
+
+  }
+  .preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 600px;
+      height: 400px;
+    }
+  }
+  .picAndChose{
+    height: 80px;
+    .chose{
+      width: 100%;
+      height: 100%;
+      lable{
+
+      }
+      img{
+        max-width: 160px;
+        max-height: 100px;
+      }
+      input{
+
+      }
+    }
+    text-align: center;
+    // padding: 30px;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="all">
+  <button class="btn btn-danger delete" (click)="deleteimage()" > x </button>
+  <div class="preview">
+    <img src="{{preview}}">
+  </div>
+  <hr>
+  <div class="picAndChose">
+    <div class="chose">
+      <label *ngIf="images.length < 5 " for="ch" class="pluse btn btn-success">+</label>
+      <img  *ngFor="let image of images ; let index = index" src="{{image}}" (click)="perviewImage(index)">
+      <input id="ch" type="file" hidden multiple (change)="getImage($event)">
+    </div>
+  </div>
+  <hr>
+  <div class="direct d-flex justify-content-end">
+    <button class="btn btn-primary  rounded-pill m-2" [disabled]="!preview || this.imageIndex == 0" (click)="back()"> < </button>
+        <button class="btn btn-primary rounded-pill m-2" [disabled]="!preview || this.imageIndex == (images.length -1)" (click)="next()"> > </button>
+  </div>
+</div>
+<!-- onError="this.src='../assets/ef3-placeholder-image.jpg'" -->
